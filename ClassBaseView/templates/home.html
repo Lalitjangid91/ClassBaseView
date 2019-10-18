@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+.matrix1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+select,option{
+  width:100%;
+  padding: 10px;
+}
+.lalit1
+{
+  background-color:white;
+}
+label{
+ font-size: 20px;
+ font-weight: bold;
+ color:#55aadd;
+}
+input[type=text],[type=submit],[type=number]
+{
+  width:100%;
+  padding:10px;
+}
+.matrix  {
+  float: left;
+}
+
+.matrix a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.matrix a:hover {
+  background-color: #111;
+  text-decoration: none;
+}
+table,tr,th,td{
+  border: 3px solid black;
+}
+table{
+ padding: 50px;
+}
+th,td{
+  padding: 10px;
+  color:#129945;
+  background-color: #88ee99;
+}
+</style>
+</head>
+<body>
+
+<ul class='matrix1'>
+  <li class='matrix'><a class="active" href="{% url 'admin:index' %}">Admin</a></li>
+  <li class='matrix'><a href="{% url 'school' %}">School</a></li>
+  <li class='matrix'><a href="{% url 'student' %}">Student</a></li>
+  <li class='matrix'><a href="{% url 'addschool' %}">AddSchool</a> </li>
+  <li class='matrix'><a href="{% url 'addstudent' %}">AddStudent</a></li>
+  <li class='matrix'><a href="{% url 'deleteschool' %}">DeleteSchool</a> </li>
+  <li class='matrix'><a href="{% url 'deletestudent' %}">DeleteStudent</a> </li>
+  <li class='matrix'><a href="{% url 'updateschool' %}">UpDateSchool</a> </li>
+  <li class='matrix'><a href="{% url 'updatestudent' %}">UpDateStudent</a> </li>
+
+</ul>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <ul>
+      {% for var in student_list %}
+      <li><a href="{{var.id}}">{{var.name}} {{var.age}} {{var.school}}</a></li><br>
+      {% endfor %}
+    </ul>
+
+
+  </div>
+
+</div>
+{% endblock %}

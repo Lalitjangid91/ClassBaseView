@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    {% for var in school_list %}
+    <h1>{{var.id}}. <a href="{{var.id}}">{{var.name}}</a></h1>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
